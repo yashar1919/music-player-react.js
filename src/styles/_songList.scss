@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap");
+
+.song-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 100vh;
+  background-color: gainsboro;
+  box-shadow: 2px 2px 50px rgb(204, 204, 204);
+  overflow: scroll;
+  transition: all 1s linear;
+
+  h2 {
+    padding: 1vw;
+    text-align: center;
+    font-family: "Fugaz One", cursive;
+    font-size: 2rem;
+  }
+}
+
+.song-list-items {
+  display: flex;
+  flex-direction: column;
+  padding: 4vh 2vw;
+  align-items: center;
+
+  img {
+    width: 40%;
+  }
+}
+
+.song-item {
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darkgray;
+  }
+}
+
+.song-description {
+  padding-left: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 {
+    font-size: 1rem;
+    margin-bottom: 1vh;
+    font-family: "Zen Dots", cursive;
+  }
+
+  h4 {
+    font-size: 0.7rem;
+    font-family: "Zen Dots", cursive;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 555, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 555, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+.selected {
+  background-color: rgba(155, 155, 555, 0.5);
+}
+
+.displayList {
+  transform: translateX(-30vw);
+}
