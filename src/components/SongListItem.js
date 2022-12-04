@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SongListItem = ({ song, setCurrentSong, songs,setSongs }) => {
+const SongListItem = ({ song, setCurrentSong, songs, setSongs }) => {
 
     const songSelect = () => {
         const selectedSong = songs.filter(item => item.id === song.id);

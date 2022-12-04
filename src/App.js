@@ -15,10 +15,10 @@ function App() {
 
   return (
     <div className={`App ${displayListSong ? "activeList" : ""}`}>
-      <ToggleList displayListSong={displayListSong} setDisplayListSong={setDisplayListSong}/>
-      <Song currentSong={currentSong}/>
-      <Player setSongs={setSongs} setCurrentSong={setCurrentSong} currentSong={currentSong} isPlaying={isPlaying} setIsPlaying={setIsPlaying} songs={songs}/>
-      <SongList songs={songs} setCurrentSong={setCurrentSong} setSongs={setSongs} displayListSong={displayListSong}/>
+      <ToggleList displayListSong={displayListSong} setDisplayListSong={setDisplayListSong} />
+      <Song currentSong={currentSong} />
+      <Player setSongs={setSongs} setCurrentSong={setCurrentSong} currentSong={currentSong} isPlaying={isPlaying} setIsPlaying={setIsPlaying} songs={songs} />
+      <SongList songs={songs} setCurrentSong={setCurrentSong} setSongs={setSongs} displayListSong={displayListSong} />
     </div>
   );
 }

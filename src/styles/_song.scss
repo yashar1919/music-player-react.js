@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 .song-container {
   min-height: 60vh;
@@ -28,10 +28,9 @@
   }
 }
 
-
 @media screen and (max-width: 768px) {
-  .song-container{
-    img{
+  .song-container {
+    img {
       width: 60%;
     }
   }

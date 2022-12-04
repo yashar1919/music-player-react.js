@@ -40,7 +40,7 @@ const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setCurrentSong, s
             const currentIndex = songs.findIndex(item => item.id === currentSong.id);
             if (currentIndex === (songs.length - 1)) {
                 setCurrentSong(songs[0])
-            }else{
+            } else {
                 setCurrentSong(songs[currentIndex + 1])
             }
             playSong();
@@ -79,7 +79,7 @@ const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setCurrentSong, s
 
     }
 
-    
+
     return (
         <div className='player'>
 
