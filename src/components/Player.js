@@ -1,24 +1,25 @@
-import React, { useRef, useState } from 'react';
-import { useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight, faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
-const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setCurrentSong , setSongs}) => {
+const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setCurrentSong, setSongs }) => {
 
-    useEffect = (() => {
+    useEffect(() => {
         const newSongsList = songs.map(item => {
             if (item.id === currentSong.id) {
                 return { ...item, active: true }
             } else {
                 return { ...item, active: false }
             }
-        });
+        })
 
         setSongs(newSongsList);
+    }, [currentSong]);
 
-    },[currentSong]);
 
     const audioRef = useRef(null);
+
     const playSong = () => {
         if (isPlaying) {
             audioRef.current.pause();
@@ -34,8 +35,17 @@ const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setCurrentSong , 
     const timeUpdateHandler = (e) => {
         const currentTime = e.target.currentTime;
         const duration = e.target.duration;
-        setSongInfo({ ...songInfo, currentTime: currentTime, duration: duration });
 
+        if (currentTime === duration) {
+            const currentIndex = songs.findIndex(item => item.id === currentSong.id);
+            if (currentIndex === (songs.length - 1)) {
+                setCurrentSong(songs[0])
+            }else{
+                setCurrentSong(songs[currentIndex + 1])
+            }
+            playSong();
+        }
+        setSongInfo({ ...songInfo, currentTime: currentTime, duration: duration });
     }
 
     const timeFormat = (time) => {
@@ -69,6 +79,7 @@ const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setCurrentSong , 
 
     }
 
+    
     return (
         <div className='player'>
 

@@ -86,3 +86,13 @@
 .displayList {
   transform: translateX(-30vw);
 }
+
+@media screen and (max-width: 768px) {
+  .song-list {
+    width: 100vw;
+  }
+
+  .displayList{
+    transform: translateX(-100vw);
+  }
+}

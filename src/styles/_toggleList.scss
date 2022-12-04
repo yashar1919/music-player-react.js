@@ -1,24 +1,35 @@
-nav{
-    min-height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    button{
-        background: transparent;
-        cursor: pointer;
-        border: 2px solid black;
-        padding: 0.5rem;
-        transition: all 0.3s ease;
-        &:hover{
-            background: rgb(65, 65, 65);
-            color: white;
-        }
+nav {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  button {
+    background: transparent;
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    &:hover {
+      background: rgb(65, 65, 65);
+      color: white;
     }
-
+  }
 }
 
-#title{
-    font-family: "Zen Dots", cursive;
-    font-size: 2rem;
-    color: blueviolet;
+#title {
+  font-family: "Zen Dots", cursive;
+  font-size: 2rem;
+  color: blueviolet;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    button {
+      z-index: 10;
+      position: fixed;
+      top: 2vh;
+      right: 2vw;
+    }
+  }
+  
 }
